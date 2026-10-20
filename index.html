@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MATLAB + Simulink Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>MATLAB + Simulink Dashboard</h1>
+        <p>Live Simulation Monitoring</p>
+    </header>
+
+    <main>
+        <section class="status-grid">
+
+            <div class="status-card">
+                <h3>Estimated Speed</h3>
+                <p id="speedValue">Waiting...</p>
+            </div>
+
+            <div class="status-card">
+                <h3>Estimated Heading</h3>
+                <p id="headingValue">Waiting...</p>
+            </div>
+
+            <div class="status-card">
+                <h3>Fault Status</h3>
+                <p id="faultValue">Waiting...</p>
+            </div>
+
+            <div class="status-card">
+                <h3>Connection Status</h3>
+                <p id="status">Not connected</p>
+            </div>
+
+        </section>
+
+        <section class="graphs-section">
+            <h2>Simulation Output Graphs</h2>
+
+            <div class="graphs-grid">
+
+                <div class="graph-card">
+                    <h3>Estimated Speed</h3>
+                    <div class="chart-container">
+                        <canvas id="speedChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Estimated Position</h3>
+                    <div class="chart-container">
+                        <canvas id="positionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Estimated Heading</h3>
+                    <div class="chart-container">
+                        <canvas id="headingChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Fault Detection</h3>
+                    <div class="chart-container">
+                        <canvas id="faultChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

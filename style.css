@@ -1,0 +1,93 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.status-card,
+.graph-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    min-width: 0;
+}
+
+.status-card p {
+    font-size: 20px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.graphs-section h2 {
+    margin-bottom: 16px;
+}
+
+.graphs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.graph-card {
+    height: 310px;
+}
+
+.graph-card h3 {
+    margin: 0 0 14px;
+    font-size: 16px;
+}
+
+.chart-container {
+    position: relative;
+    height: 240px;
+    width: 100%;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .status-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .graphs-grid,
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+}
